@@ -5,7 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product-card</title>
 </head>
+<style>
+    .img{
+        height: 200px;
+        width: auto;
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,232,51,1) 0%, rgba(250,196,59,1) 100.2% );
+         margin: 5px auto;
+         display: block;
+         border-radius: 20px;
+    }
+    .card{
+       
+        width: 250px;
+        border-radius: 20px;
+        padding: 5px;
+        box-shadow: 0 0 9px 2px grey;
+        background-color: white;
+       margin: 30px 10px;
+    }
+
+    .title{
+        font-size: 25px;
+        
+    }
+
+    .card-body{
+        margin-left: 15px;
+    }
+
+    .description{
+font-size: 15px;
+    }
+
+    .prize{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .quantity{
+        he
+    }
+
+    .btn{
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,232,51,1) 0%, rgba(250,196,59,1) 100.2% );
+    border: none;
+border-radius: 20px; 
+height: 40px;
+width: 100px;
+margin: 10px 60px;
+display: block;
+padding: 10px;
+}
+
+.quantity{
+    height: 42px;
+}
+
+.quantity-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-text{
+    font-size: 25px;
+    margin: auto 10px;
+}
+    body{
+        background-color: #ebebe0;
+    }
+</style>
 <body>
-    
+   <div class="card">
+    <img src="/img/bag1.png" class="img"/>
+   <div class="card-body">
+    <h1 class="title">EXOTIC hand bag for women</h1>
+    <P class="description">
+        This latest Hand Bags Hobos bag is perfect for effortless style for an evening out
+    </P>
+    <p class="prize">
+        ₹ 1,281 /-
+    </p>
+
+    <div class="quantity-container">  
+       <img src="/img/minus-button.png" style="height: 30px;"/>
+       <span class="quantity-text"> 1 </span>
+       <img src="/img/add.png" class="quantity" />
+    </div>
+    <button type="button" class="btn">
+        Buy Now
+    </button>
+
+   
+   </div>
+   </div>
+
 </body>
 </html>
