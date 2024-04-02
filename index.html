@@ -86,11 +86,13 @@ padding: 10px;
     <p class="prize">
         ₹ 1,281 /-
     </p>
+    <p id="show-quantity">1 x 1281</p>
+    <p id="show-total">1281</p>
 
     <div class="quantity-container">  
-       <img src="/img/minus-button.png" style="height: 30px;"/>
+       <img src="/img/minus-button.png" style="height: 30px;" onclick="dec()"/>
        <span class="quantity-text" id="quantity-text"> 1 </span>
-       <img src="/img/add.png" class="quantity" />
+       <img src="/img/add.png" class="quantity" onclick="inc()" />
     </div>
     <button type="button" class="btn">
         Buy Now
@@ -101,6 +103,37 @@ padding: 10px;
    </div>
 
 
-   
+   <script>
+    function inc(){
+const quantityText = document.getElementById("quantity-text");
+const showQuantity = document.getElementById("show-quantity");
+const showTotal = document.getElementById("show-total");
+let quantity = parseInt(quantityText.innerText);
+if (quantity<10){
+quantityText.innerText = ++quantity;
+} else
+{
+    alert("You can't add more than 10  items!");
+}
+showQuantity.innerText = `${quantity} * 1281`;
+showTotal.innerText = `Total: ${quantity * 1281}`;
+}
+
+    function dec(){
+        const quantityText = document.getElementById("quantity-text");
+        const showQuantity = document.getElementById("show-quantity");
+const showTotal = document.getElementById("show-total");
+
+let quantity = parseInt(quantityText.innerText);
+if(quantity>1){
+quantityText.innerText = --quantity; 
+} else
+{
+    alert("You can't add less than 1 items!")
+}
+showQuantity.innerText = `${quantity} * 1281`;
+showTotal.innerText = `Total: ${quantity * 1281}`;
+    }
+   </script>
 </body>
 </html>
